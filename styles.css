@@ -1,43 +1,47 @@
-*
-    .poppins-regular {
-        font-family: "Poppins", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-      }
-      
-      .poppins-medium {
-        font-family: "Poppins", sans-serif;
-        font-weight: 500;
-        font-style: normal;
-      }
-      
-      .poppins-semibold {
-        font-family: "Poppins", sans-serif;
-        font-weight: 600;
-        font-style: normal;
+* .poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
-.section1 {
+.poppins-medium {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.section1 h1{
+    font-size: 2rem;
     color: #000000;
 }
+
 /* Oculta a barra de rolagem mas permite a rolagem suave */
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
-    height: 100%;/* Oculta a barra de rolagem principal */
+    height: 100%;
+    /* Oculta a barra de rolagem principal */
 }
 
 body {
-    overflow: hidden; /* Evita barras de rolagem */
+    overflow: hidden;
+    /* Evita barras de rolagem */
     position: relative;
 }
 
 section {
-    
     font-family: "Poppins", sans-serif;
     font-weight: 600;
     font-style: normal;
-    height: 100vh; /* Cada slide ocupa a altura da tela */
+    height: 100vh;
+    /* Cada slide ocupa a altura da tela */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -46,8 +50,46 @@ section {
     text-align: center;
 }
 
-.section1 { background-color: #ffffff; }
-.section2 { background-color: #2ecc71; }
-.section3 { background-color: #e74c3c; }
-.section4 { background-color: #f39c12; }
-.section5 { background-color: #8e44ad; }
+.section1 {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between; /* Distribui espaço entre os itens */
+    align-items: center; /* Centraliza os itens verticalmente */
+}
+.section2 {
+    background-color: #2ecc71;
+}
+
+.section3 {
+    background-color: #e74c3c;
+}
+
+.section4 {
+    background-color: #f39c12;
+}
+
+.section5 {
+    background-color: #8e44ad;
+}
+
+.esquerda1 {
+    padding-left: 6rem;
+    height: 50vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+.esquerda1, img{
+    width: 20rem;
+    /* Define a largura fixa das imagens */
+    height: auto;
+    /* Mantém a proporção original das imagens */
+}
+.direita1{
+    padding-right: 6rem;
+    width: 20rem;
+    /* Define a largura fixa das imagens */
+    height: auto;
+    /* Mantém a proporção original das imagens */
+}
