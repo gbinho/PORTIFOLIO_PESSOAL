@@ -16,10 +16,6 @@
     font-style: normal;
 }
 
-.section1 h1{
-    font-size: 2rem;
-    color: #000000;
-}
 
 /* Oculta a barra de rolagem mas permite a rolagem suave */
 html,
@@ -37,9 +33,6 @@ body {
 }
 
 section {
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-    font-style: normal;
     height: 100vh;
     /* Cada slide ocupa a altura da tela */
     display: flex;
@@ -50,11 +43,15 @@ section {
     text-align: center;
 }
 
-.section1 {
-    background-color: #ffffff;
+.section1 {    
     display: flex;
-    justify-content: space-between; /* Distribui espaço entre os itens */
-    align-items: center; /* Centraliza os itens verticalmente */
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    padding: 0 5rem;
+    background-color: #ffffff;
+    position: relative; /* Permite controle de posicionamento interno */
+    overflow: visible;  /* Garante que nada seja cortado */
 }
 .section2 {
     background-color: #2ecc71;
@@ -72,15 +69,43 @@ section {
     background-color: #8e44ad;
 }
 
+.section1 h2{
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 2rem;
+    color: #000000;
+    
+}
+
+.section1 h1{
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    padding-left: 17rem;
+    font-size: 4rem;
+    color: #000000;
+    
+}
+
+
+
 .esquerda1 {
-    padding-left: 6rem;
-    height: 50vw;
+    position: relative; /* Necessário para o h1 absoluto */
+    letter-spacing: -2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-right: 27rem;
+    padding-left: 15rem;
     display: flex;
     align-items: center;
     flex-direction: column;
+    gap: 1rem;
+    z-index: 2; /* Para garantir que esteja acima da direita1 */
 
 }
-.esquerda1, img{
+.esquerda1 img{
     width: 20rem;
     /* Define a largura fixa das imagens */
     height: auto;
@@ -88,8 +113,20 @@ section {
 }
 .direita1{
     padding-right: 6rem;
-    width: 20rem;
+    width: 45vw;
     /* Define a largura fixa das imagens */
     height: auto;
     /* Mantém a proporção original das imagens */
 }
+.direita1 img {
+    margin-bottom: 7rem;
+    margin-left: 2rem;
+    width: auto;
+    height: 40rem; 
+}
+
+#job-title {
+    font-size: 24px; /* Tamanho do texto, ajuste conforme necessário */
+    margin-top: 10px;
+}
+
