@@ -13,15 +13,15 @@ let currentWord = 0;
 
 function changeWord() {
     gsap.to("#job-title", {
-        duration: 1, // Tempo de animação
-        text: words[currentWord], // Texto atual
-        ease: "none", // Suavização
+        duration: 1.2, // Tempo de animação mais suave
+        text: words[currentWord],
+        ease: "power2.out", // Suavização mais suave
         onComplete: () => {
-            currentWord = (currentWord + 1) % words.length; // Muda para a próxima palavra
+            currentWord = (currentWord + 1) % words.length;
             gsap.to("#job-title", {
-                duration: 0.5, // Tempo antes da próxima troca
-                delay: 1, // Espera 1 segundo antes de começar a trocar de novo
-                onComplete: changeWord // Chama a função recursivamente
+                duration: 0.6,
+                delay: 1,
+                onComplete: changeWord
             });
         }
     });
@@ -33,12 +33,11 @@ changeWord(); // Inicia a animação de troca de palavras
 gsap.registerPlugin(ScrollToPlugin);
 
 let isScrolling = false;
-const scrollDuration = 700; // Duração da rolagem em milissegundos
-let startTouchY = 0; // Variável para armazenar a posição inicial do toque
+const scrollDuration = 1000; // Aumentei a duração para 1000ms para suavidade extra
+let startTouchY = 0;
 
-// Função para rolar a página
 function scrollPage(delta) {
-    if (isScrolling) return; // Ignora se já estiver rolando
+    if (isScrolling) return;
 
     isScrolling = true;
     const scrollAmount = window.innerHeight;
@@ -50,52 +49,56 @@ function scrollPage(delta) {
             offsetY: 0
         },
         duration: scrollDuration / 1000, // GSAP usa segundos
-        ease: "power2.inOut",
-        onComplete: () => isScrolling = false // Permite novos eventos de rolagem
+        ease: "power2.inOut", // Suavização mais suave (power2.inOut)
+        onComplete: () => isScrolling = false
     });
 
-    // Detecta se a segunda seção está visível e troca o header/nav
     toggleMenuIcon(targetScroll);
 }
 
-// Função para monitorar a posição do scroll e alternar o menu/nav
 function toggleMenuIcon(scrollYPosition) {
     const secondSectionTop = document.querySelector(".section2").offsetTop;
     const header = document.querySelector(".header");
     const menuIcon = document.querySelector(".menu-icon");
 
     if (scrollYPosition >= secondSectionTop) {
-        header.classList.add("hidden"); // Esconde o header
-        menuIcon.classList.add("active"); // Mostra o ícone de menu
+        header.classList.add("hidden");
+        menuIcon.classList.add("active");
     } else {
         header.classList.remove("hidden");
         menuIcon.classList.remove("active");
     }
 }
 
-// Lidar com eventos de rolagem do mouse
+// Eventos de rolagem com mouse
 window.addEventListener('wheel', function(event) {
     const delta = Math.sign(event.deltaY);
     scrollPage(delta);
 });
 
-// Lidar com eventos de toque em dispositivos móveis
+// Eventos de toque em dispositivos móveis
 window.addEventListener('touchstart', function(event) {
-    startTouchY = event.touches[0].clientY; // Armazena a posição inicial do toque
+    startTouchY = event.touches[0].clientY;
 });
 
 window.addEventListener('touchend', function(event) {
-    const endTouchY = event.changedTouches[0].clientY; // Pega a posição final do toque
+    const endTouchY = event.changedTouches[0].clientY;
     const delta = startTouchY - endTouchY;
 
-    // Se a diferença for significativa, considerar como um movimento para cima ou para baixo
     if (Math.abs(delta) > 30) {
         scrollPage(Math.sign(delta));
     }
 });
 
-// Inicializa o ícone de menu (usado para quando clicar no ícone no celular)
-document.querySelector(".menu-icon").addEventListener("click", function() {
-    // Adicione aqui o comportamento do ícone de menu se quiser mostrar o menu
-    console.log("Menu icon clicked");
+// Evento para o botão de voltar ao topo
+document.querySelector('#back-to-top').addEventListener('click', function(e) {
+    e.preventDefault();
+    gsap.to(window, {
+        scrollTo: {
+            y: 0,
+            offsetY: 0
+        },
+        duration: 1.2, // Duração da rolagem suave para o topo
+        ease: "power2.inOut" // Suavização mais suave
+    });
 });
