@@ -49,9 +49,7 @@ section {
     overflow: visible;
 }
 
-.section2 {
-    background-color: #2ecc71;
-}
+
 
 .section3 {
     background-color: #e74c3c;
@@ -66,7 +64,7 @@ section {
 }
 
 #eu {
-    margin-top: 10.5rem;
+    margin-top: 10.7rem;
     position: absolute;
     top: -9rem;
     left: 5rem;
