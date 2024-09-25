@@ -107,8 +107,8 @@ section {
 .direita1 img {
     margin-bottom: 7rem;
     margin-left: 2rem;
-    width: auto;
-    height: 40rem; 
+    width: 30rem;
+    height: auto; 
 }
 
 .section1 h2{
@@ -187,10 +187,6 @@ section {
     transition: all 0.5s ease;
 }
 
-.esquerda1 img, .direita1 img {
-    max-width: 100%; /* Assegura que as imagens não ultrapassem a largura do container */
-    height: auto; /* Mantém a proporção */
-}
 
 #back-to-top {
     opacity: 50%;
