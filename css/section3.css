@@ -1,0 +1,116 @@
+/* Container geral */
+.container {
+    display: flex;
+    height: 100vh;
+    /* Ocupa toda a altura da tela */
+    width: 100vw;
+    /* Ocupa toda a largura da tela */
+    overflow: hidden;
+    /* Evita scroll */
+}
+
+/* Estilos base para os projetos */
+.project {
+    position: relative;
+    flex: 1;
+    /* Dividir a tela igualmente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: flex 0.7s ease, box-shadow 0.5s ease, transform 0.5s ease;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    /* Sombra sutil */
+}
+
+ADICIONAR TODO:
+
+/* Projetos com imagem de fundo */
+.project-left {
+    background-image: url('caminho/para/sua-imagem1.jpg');
+    /* Substitua pelo caminho da sua imagem */
+    background-size: cover;
+    /* A imagem cobre toda a área da div */
+    background-position: center;
+    /* Centraliza a imagem */
+    background-repeat: no-repeat;
+    /* Evita que a imagem se repita */
+}
+
+.project-right {
+    background-image: url('caminho/para/sua-imagem2.jpg');
+    /* Substitua pelo caminho da sua imagem */
+    background-size: cover;
+    /* A imagem cobre toda a área da div */
+    background-position: center;
+    /* Centraliza a imagem */
+    background-repeat: no-repeat;
+    /*Evita que a imagem se repita */
+    /* Projetos lado esquerdo e direito */
+}
+
+.project-left {
+
+    background-color: #3498db;
+    /* Cor para o lado esquerdo */
+}
+
+.project-right {
+    background-color: #2ecc71;
+    /* Cor para o lado direito */
+}
+
+/* Estilo do conteúdo dentro dos projetos */
+.content {
+    color: white;
+    text-align: center;
+    opacity: 0.7;
+    /* Deixa o conteúdo inicialmente mais suave */
+    transition: opacity 0.3s ease, transform 0.5s ease;
+    transform: scale(0.9);
+    /* Tamanho inicial levemente menor */
+}
+
+.content h2 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.content a {
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.content a:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+    transform: scale(1.05);
+    /* Botão cresce levemente no hover */
+}
+
+/* Efeito de hover: projeto se expande */
+.project:hover {
+    flex: 3;
+    /* Expande o projeto ao passar o mouse */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    /* Aumenta a sombra no hover */
+    transform: scale(1.02);
+    /* Leve zoom no container */
+}
+
+/* Ajuste da opacidade e transformações no hover */
+.project:hover .content {
+    opacity: 1;
+    /* Torna o conteúdo mais visível */
+    transform: scale(1);
+    /* Conteúdo volta ao tamanho normal */
+}
