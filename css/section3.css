@@ -26,30 +26,28 @@
 
 
 .project-left {
-    background-image:
-        linear-gradient(to bottom left, #090D38, #0A0E39, #161D6B, #686a80, #FFF6DB);
-    background-image: url('/imgs/MOCKUP\ PC\ E\ \ Q.png') background-size: cover;
+    background-image: linear-gradient(to bottom left, #090D38, #0A0E39, #161D6B, #686a80, #FFF6DB);
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 .project-right {
-    background-image:
-        linear-gradient(to bottom right, #F24E1E, #F24E1E, #d65831, #e98364, #ffffff),
-        url('/imgs/eu.png');
+    background-image:linear-gradient(to bottom right, #F24E1E, #F24E1E, #d65831, #e98364, #ffffff);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 
-.project-right {
-    background-color: #2ecc71;
-    /* Cor para o lado direito */
-}
 
 /* Estilo do conteúdo dentro dos projetos */
 .content {
+    background-color: black;
+    border-radius: 30px;
+    margin-top: 25rem;
+    padding: 1rem;
+    padding-bottom: 4rem;
     font-family: 'Poppins', sans-serif;
     color: white;
     text-align: center;
@@ -58,6 +56,36 @@
     transition: opacity 0.3s ease, transform 0.5s ease;
     transform: scale(0.9);
     /* Tamanho inicial levemente menor */
+}
+
+.foto-projetoE {
+    background-image: url(/imgs/MOCKUP\ PC\ E\ \ Q.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 45rem;
+    width: 100vw;
+    height: 100vh;
+    padding: 0%;
+    margin: 0%;
+        /* Deixa o conteúdo inicialmente mais suave */
+        transition: opacity 0.3s ease, transform 0.5s ease;
+        transform: scale(0.8);
+        /* Tamanho inicial levemente menor */
+}
+
+.foto-projetoD {
+    background-image: url(/imgs/PORTFOLIO\ PC.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 55rem;
+    width: auto;
+    height: 100vh;
+    padding: 0%;
+    margin: 0%;
+        /* Deixa o conteúdo inicialmente mais suave */
+        transition: opacity 0.3s ease, transform 0.5s ease;
+        transform: scale(0.8);
+        /* Tamanho inicial levemente menor */
 }
 
 .content h2 {
@@ -74,6 +102,7 @@
 }
 
 .content a {
+    font-size: 25px;
     padding: 10px 20px;
     background-color: rgba(255, 255, 255, 0.3);
     color: white;
@@ -100,6 +129,18 @@
 
 /* Ajuste da opacidade e transformações no hover */
 .project:hover .content {
+    opacity: 1;
+    /* Torna o conteúdo mais visível */
+}
+
+.project:hover .foto-projetoD {
+    opacity: 1;
+    /* Torna o conteúdo mais visível */
+    transform: scale(1);
+    /* Conteúdo volta ao tamanho normal */
+}
+
+.project:hover .foto-projetoE {
     opacity: 1;
     /* Torna o conteúdo mais visível */
     transform: scale(1);
