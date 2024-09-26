@@ -52,7 +52,12 @@ section {
 
 
 .section3 {
-    background-color: #e74c3c;
+    background-color: linear-gradient(to bottom left, 
+    #090D38, 
+    #0A0E39, 
+    #161D6B, 
+    #171F73, 
+    #FFF6DB);
 }
 
 .section4 {

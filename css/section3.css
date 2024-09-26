@@ -24,37 +24,24 @@
     /* Sombra sutil */
 }
 
-ADICIONAR TODO:
 
-/* Projetos com imagem de fundo */
 .project-left {
-    background-image: url('caminho/para/sua-imagem1.jpg');
-    /* Substitua pelo caminho da sua imagem */
-    background-size: cover;
-    /* A imagem cobre toda a área da div */
+    background-image:
+        linear-gradient(to bottom left, #090D38, #0A0E39, #161D6B, #686a80, #FFF6DB);
+    background-image: url('/imgs/MOCKUP\ PC\ E\ \ Q.png') background-size: cover;
     background-position: center;
-    /* Centraliza a imagem */
     background-repeat: no-repeat;
-    /* Evita que a imagem se repita */
 }
 
 .project-right {
-    background-image: url('caminho/para/sua-imagem2.jpg');
-    /* Substitua pelo caminho da sua imagem */
+    background-image:
+        linear-gradient(to bottom right, #F24E1E, #F24E1E, #d65831, #e98364, #ffffff),
+        url('/imgs/eu.png');
     background-size: cover;
-    /* A imagem cobre toda a área da div */
     background-position: center;
-    /* Centraliza a imagem */
     background-repeat: no-repeat;
-    /*Evita que a imagem se repita */
-    /* Projetos lado esquerdo e direito */
 }
 
-.project-left {
-
-    background-color: #3498db;
-    /* Cor para o lado esquerdo */
-}
 
 .project-right {
     background-color: #2ecc71;
@@ -63,6 +50,7 @@ ADICIONAR TODO:
 
 /* Estilo do conteúdo dentro dos projetos */
 .content {
+    font-family: 'Poppins', sans-serif;
     color: white;
     text-align: center;
     opacity: 0.7;
@@ -73,13 +61,16 @@ ADICIONAR TODO:
 }
 
 .content h2 {
-    font-size: 2.2em;
+    font-weight: 700;
+    font-size: 4.2em;
     margin-bottom: 20px;
 }
 
 .content p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    font-size: 1.5em;
+    margin-bottom: 2rem;
 }
 
 .content a {
