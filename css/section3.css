@@ -45,9 +45,8 @@
 .content {
     background-color: black;
     border-radius: 30px;
-    margin-top: 18rem;
     padding: 0.5rem;
-    padding-bottom: 4rem;
+    padding-bottom: 1rem;
     font-family: 'Poppins', sans-serif;
     color: white;
     text-align: center;
@@ -58,12 +57,18 @@
     /* Tamanho inicial levemente menor */
 }
 
+.foto-projetoE img{
+    width: 20rem;
+    height: auto;
+}
+
+.foto-projetoD img{
+    width: 23rem;
+    height: auto;
+}
+
 .foto-projetoE {
-    background-image: url(imgs/MOCKUP\ PC\ E\ \ Q.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 40rem;
-    width: 100vw;
+    width: auto;
     height: 100vh;
         /* Deixa o conteúdo inicialmente mais suave */
         transition: opacity 0.3s ease, transform 0.5s ease;
@@ -72,10 +77,6 @@
 }
 
 .foto-projetoD {
-    background-image: url(imgs/PORTFOLIO\ PC.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 45rem;
     width: auto;
     height: 100vh;
         /* Deixa o conteúdo inicialmente mais suave */
