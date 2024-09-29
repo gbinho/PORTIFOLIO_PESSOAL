@@ -1,19 +1,31 @@
+.section3 {
+    flex-direction: column;
+    display: flex;
+    align-items: cente;
+}
+
+#titulo-central h2{
+    padding: 0.3%;
+    margin: 0%;
+    background-color: black;
+    width: 100vw;  
+    font-family: 'Poppins', sans-serif;
+    color: white;
+
+}
+
 /* Container geral */
 .container {
     display: flex;
     height: 100vh;
-    /* Ocupa toda a altura da tela */
     width: 100vw;
-    /* Ocupa toda a largura da tela */
     overflow: hidden;
-    /* Evita scroll */
 }
 
 /* Estilos base para os projetos */
 .project {
     position: relative;
     flex: 1;
-    /* Dividir a tela igualmente */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,9 +33,7 @@
     overflow: hidden;
     cursor: pointer;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-    /* Sombra sutil */
 }
-
 
 .project-left {
     background-image: linear-gradient(to bottom left, #090D38, #0A0E39, #161D6B, #686a80, #FFF6DB);
@@ -33,13 +43,11 @@
 }
 
 .project-right {
-    background-image:linear-gradient(to bottom right, #F24E1E, #F24E1E, #d65831, #e98364, #ffffff);
+    background-image: linear-gradient(to bottom right, #F24E1E, #F24E1E, #d65831, #e98364, #ffffff);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
-
-
 
 /* Estilo do conteúdo dentro dos projetos */
 .content {
@@ -51,40 +59,44 @@
     color: white;
     text-align: center;
     opacity: 0.7;
-    /* Deixa o conteúdo inicialmente mais suave */
     transition: opacity 0.3s ease, transform 0.5s ease;
     transform: scale(0.9);
-    /* Tamanho inicial levemente menor */
 }
 
-.foto-projetoE img{
+.foto-projetoE img {
     width: 20rem;
     height: auto;
 }
 
-.foto-projetoD img{
-    width: 23rem;
+.foto-projetoD img {
+    width: 23.1rem;
     height: auto;
 }
 
-.foto-projetoE {
+.foto-projetoE, .foto-projetoD {
     width: auto;
     height: 100vh;
-        /* Deixa o conteúdo inicialmente mais suave */
-        transition: opacity 0.3s ease, transform 0.5s ease;
-        transform: scale(0.8);
-        /* Tamanho inicial levemente menor */
+    transition: opacity 0.3s ease, transform 0.5s ease;
+    transform: scale(0.8);
 }
 
-.foto-projetoD {
-    width: auto;
-    height: 100vh;
-        /* Deixa o conteúdo inicialmente mais suave */
-        transition: opacity 0.3s ease, transform 0.5s ease;
-        transform: scale(0.8);
-        /* Tamanho inicial levemente menor */
+/* Estilos de hover */
+.project:hover {
+    flex: 3;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
 }
 
+.project:hover .content {
+    opacity: 1;
+}
+
+.project:hover .foto-projetoD, .project:hover .foto-projetoE {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Conteúdo do projeto */
 .content h2 {
     font-weight: 700;
     font-size: 4.2em;
@@ -111,35 +123,5 @@
 .content a:hover {
     background-color: rgba(255, 255, 255, 0.6);
     transform: scale(1.05);
-    /* Botão cresce levemente no hover */
 }
 
-/* Efeito de hover: projeto se expande */
-.project:hover {
-    flex: 3;
-    /* Expande o projeto ao passar o mouse */
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-    /* Aumenta a sombra no hover */
-    transform: scale(1.02);
-    /* Leve zoom no container */
-}
-
-/* Ajuste da opacidade e transformações no hover */
-.project:hover .content {
-    opacity: 1;
-    /* Torna o conteúdo mais visível */
-}
-
-.project:hover .foto-projetoD {
-    opacity: 1;
-    /* Torna o conteúdo mais visível */
-    transform: scale(1);
-    /* Conteúdo volta ao tamanho normal */
-}
-
-.project:hover .foto-projetoE {
-    opacity: 1;
-    /* Torna o conteúdo mais visível */
-    transform: scale(1);
-    /* Conteúdo volta ao tamanho normal */
-}
