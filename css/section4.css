@@ -1,9 +1,16 @@
 
+.section4 { 
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
 .section4 h1{
     background-color: #000000;
-    color: #bc1f1f;
+    color: #ffffff;
     font-family: 'Poppins', sans-serif;
     padding: 10px 20px;
     border-radius: 10px;
     margin-bottom: 2rem;
+
 }
