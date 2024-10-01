@@ -34,7 +34,6 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
     text-align: center;
 }
 
@@ -61,7 +60,7 @@ section {
 }
 
 .section4 {
-    background-color: #f39c12;
+    background-color: #ffffff;
 }
 
 .section5 {
