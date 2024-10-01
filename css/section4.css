@@ -1,5 +1,14 @@
-
 .section4 { 
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.midsection{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+.area-textos {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -14,3 +23,15 @@
     margin-bottom: 2rem;
 
 }
+
+.section4 p {
+    text-align: left;
+    background-color: #ff5e00;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    padding: 5px 30px;
+    border-radius: 8px;
+    display: inline-block;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+

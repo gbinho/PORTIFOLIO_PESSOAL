@@ -1,7 +1,7 @@
 .section3 {
     flex-direction: column;
     display: flex;
-    align-items: cente;
+    align-items: center;
 }
 
 #titulo-central h2{
