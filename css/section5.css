@@ -1,20 +1,25 @@
-.section4 { 
+.section5 { 
     display: flex;
     align-items: center;
     flex-direction: column;
 }
+
 .midsection{
     display: flex;
     align-items: center;
     flex-direction: row;
 }
+
+.midsection img{
+}
+
 .area-textos {
     display: flex;
     align-items: center;
     flex-direction: column;
 }
 
-.section5 h1{
+.topo h1{
     background-color: #000000;
     color: #ffffff;
     font-family: 'Poppins', sans-serif;
@@ -34,3 +39,46 @@
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
 
+.textos1 h1{
+    margin: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+
+}
+
+.textos2 h1{
+    margin: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+
+}
+
+#QRCODE {
+    width: 40%;
+    height: 20%;
+    margin: 1rem;
+}
+
+#IPHONE {
+    width: 30%;
+    height: 20%;
+    margin: 1rem;
+}
+
+#LINKEDINCARD {
+    width: 60%;
+    height: 20%;
+    margin: 1rem;
+}
+
+#badgelinkedin {
+    width: 10px;
+}
