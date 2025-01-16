@@ -14,7 +14,7 @@
     flex-direction: column;
 }
 
-.section4 h1{
+.section5 h1{
     background-color: #000000;
     color: #ffffff;
     font-family: 'Poppins', sans-serif;
@@ -24,9 +24,8 @@
 
 }
 
-.section4 p {   
+.section5 p {   
     text-align: left;
-    background-color: #ff5e00;
     color: #ffffff;
     font-family: 'Poppins', sans-serif;
     padding: 5px 30px;
@@ -35,14 +34,3 @@
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
 
-
-.section4 img {
-    width: 30%;
-    padding-right: 10px;
-}
-
-.area-textos {
-    padding-left: 30px;
-    display: inline;
-    align-items: center;
-}
